@@ -23,6 +23,7 @@ class App extends Component {
     this.setState({ notes });
   }
 
+  // <Form inline='true'>
   render() {
     return (
       <div>
@@ -33,7 +34,9 @@ class App extends Component {
               this.setState({ text: event.target.value });
             }}
           />{" "}
-          <Button onClick={() => this.submit()}>Submit</Button>
+          <Button className="btn" onClick={() => this.submit()}>
+            Submit
+          </Button>
         </Form>
         {this.state.notes.map((note, index) => {
           return <Note key={index} note={note} />;
