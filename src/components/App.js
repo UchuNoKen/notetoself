@@ -49,9 +49,7 @@ class App extends Component {
               this.setState({ text: event.target.value });
             }}
           />{" "}
-          <Button className="btn" onClick={() => this.submit()}>
-            Submit
-          </Button>
+          <Button onClick={() => this.submit()}>Submit</Button>
         </Form>
         {this.state.notes.map((note, index) => {
           return <Note key={index} note={note} />;

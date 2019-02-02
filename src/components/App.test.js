@@ -8,4 +8,13 @@ describe("App", () => {
   it("renders the App title", () => {
     expect(app.find("h2").text()).toEqual("Note to Self");
   });
+
+  it("renders the clear button", () => {
+    expect(
+      app
+        .find(".btn")
+        .at(1)
+        .text()
+    ).toEqual("Clear All");
+  });
 });
