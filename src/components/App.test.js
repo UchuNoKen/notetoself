@@ -17,4 +17,10 @@ describe("App", () => {
         .text()
     ).toEqual("Clear All");
   });
+
+  describe("when rendering the form", () => {
+    it("creates a form component", () => {
+      expect(app.find("Form").exists()).toBe(true);
+    });
+  });
 });
