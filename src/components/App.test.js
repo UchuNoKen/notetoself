@@ -47,12 +47,7 @@ describe("App", () => {
     });
 
     it("updates the text in state", () => {
-      expect(
-        app
-          .state()
-          .text()
-          .toEqual(testNote)
-      );
+      expect(app.state().text).toEqual(testNote);
     });
 
     describe("and submitting the new note", () => {
@@ -73,6 +68,11 @@ describe("App", () => {
             .find(".btn")
             .at(1)
             .simulate("click");
+        });
+
+        it("clears the notes in state", () => {
+          console.log(app.state());
+          expect(app.state().notes).toEqual([]);
         });
       });
     });
