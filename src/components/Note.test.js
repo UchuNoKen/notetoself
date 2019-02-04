@@ -4,6 +4,7 @@ import Note from "./Note";
 
 const props = { note: { text: "test note" } };
 
+// test suite
 describe("Note", () => {
   let note = mount(<Note {...props} />);
 
